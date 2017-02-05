@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { addTodo } from '../actions'
 
-let AddTodo = (store) => {
+let AddTodo = ({ dispatch }) => {
   let input
   return (
     <div>
@@ -11,7 +11,7 @@ let AddTodo = (store) => {
         if (!input.value.trim()) {
           return
         }
-        store.dispatch(addTodo(input.value))
+        dispatch(addTodo(input.value))
         input.value = ''
       }}
       >
