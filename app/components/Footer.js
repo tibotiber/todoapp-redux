@@ -1,22 +1,22 @@
 import React from 'react'
-import Link from './Link'
+import FilterLink from '../containers/FilterLink'
 
 const Footer = () => {
   return (
     <p>
       Show:
       {' '}
-      <Link active={true} onClick={() => console.log('filter selected: all')}>
+      <FilterLink filter={'SHOW_ALL'}>
         All
-      </Link>
+      </FilterLink>
       {' '}
-      <Link active={false} onClick={() => console.log('filter selected: completed')}>
+      <FilterLink filter={'SHOW_COMPLETED'}>
         Completed
-      </Link>
+      </FilterLink>
       {' '}
-      <Link active={false} onClick={() => console.log('filter selected: active')}>
+      <FilterLink filter={'SHOW_ACTIVE'}>
         Active
-      </Link>
+      </FilterLink>
     </p>
   )
 }

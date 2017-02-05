@@ -1,6 +1,8 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { addTodo } from '../actions'
 
-const TodoList = () => {
+let AddTodo = (store) => {
   let input
   return (
     <div>
@@ -9,7 +11,7 @@ const TodoList = () => {
         if (!input.value.trim()) {
           return
         }
-        console.log('new todo: ' + input.value)
+        store.dispatch(addTodo(input.value))
         input.value = ''
       }}
       >
@@ -24,4 +26,6 @@ const TodoList = () => {
   )
 }
 
-export default TodoList
+AddTodo = connect()(AddTodo)
+
+export default AddTodo
