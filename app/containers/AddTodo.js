@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { addTodo } from '../actions'
 
@@ -18,12 +18,16 @@ let AddTodo = ({ dispatch }) => {
         <input ref={node => {
           input = node
         }} />
-        <button type="submit">
+        <button type='submit'>
           Add Todo
         </button>
       </form>
     </div>
   )
+}
+
+AddTodo.propTypes = {
+  dispatch: PropTypes.func.isRequired
 }
 
 AddTodo = connect()(AddTodo)
