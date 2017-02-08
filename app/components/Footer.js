@@ -1,21 +1,21 @@
 import React from 'react'
-import FilterLink from '../containers/FilterLink'
+import FLink from '../components/FLink'
 
 const Footer = () => (
   <p>
     Show:
     {' '}
-    <FilterLink filter='SHOW_ALL'>
+    <FLink filter='SHOW_ALL'>
       All
-    </FilterLink>
+    </FLink>
     {', '}
-    <FilterLink filter='SHOW_COMPLETED'>
+    <FLink filter='SHOW_COMPLETED'>
       Completed
-    </FilterLink>
+    </FLink>
     {', '}
-    <FilterLink filter='SHOW_ACTIVE'>
+    <FLink filter='SHOW_ACTIVE'>
       Active
-    </FilterLink>
+    </FLink>
   </p>
 )
 
