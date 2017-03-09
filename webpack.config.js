@@ -8,18 +8,14 @@ var HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 })
 
 module.exports = {
-  entry: [
-    './app/index.js'
-  ],
+  entry: ['./app/index.js'],
   output: {
     path: path.join(__dirname, '/dist'),
     filename: 'index_bundle.js'
   },
   devtool: 'source-map',
   module: {
-    loaders: [
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' }
-    ]
+    loaders: [{ test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' }]
   },
-  plugins: [ HtmlWebpackPluginConfig ]
+  plugins: [HtmlWebpackPluginConfig]
 }

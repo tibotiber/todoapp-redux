@@ -21,10 +21,7 @@ const todo = (todo = {}, action) => {
 const todos = (todos = [], action) => {
   switch (action.type) {
     case 'ADD_TODO':
-      return [
-        ...todos,
-        todo(undefined, action)
-      ]
+      return [...todos, todo(undefined, action)]
     case 'TOGGLE_TODO':
       return todos.map(t => todo(t, action))
     default:
